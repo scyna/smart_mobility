@@ -1,0 +1,12 @@
+dotnet new sln
+cd registering/
+dotnet new console
+cd ..
+dotnet sln add ./registering
+cd registering_test/
+donet new xunit
+
+dotnet add package Scyna.Net --version 1.0.6
+dotnet add package Scylla.Net --version 0.0.1-alpha1
+dotnet add package Google.Protobuf --version 3.22.1
+dotnet add package FluentValidation --version 11.5.1

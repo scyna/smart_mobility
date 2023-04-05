@@ -1,0 +1,27 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "registering.proto";
+option csharp_namespace = "Registering.PROTO";
+
+message RegisterUserRequest
+{
+  string Email = 1;
+  string Name = 2;
+  string Password = 3;
+}
+
+message RegisterUserResponse
+{
+  uint64 ID = 1;
+}
+
+message VerifyRegistrationRequest
+{
+  uint64 EmployeeID = 1;
+  string OTP = 2;
+}
+
+message ResendRegistrationOtpRequest
+{
+  uint64 EmployeeID = 1;
+}
